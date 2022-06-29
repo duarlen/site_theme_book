@@ -1,0 +1,16 @@
+<div class="sidebar">
+  <nav>
+    <ul id="side-nav" class="side-nav">
+      {% for c in categoriesTree %}
+      <details>
+        <summary class="side-title">{{ c.name }}</summary>
+        <ul>
+          {% for p2 in c.posts %}
+          <li><a title="{{ p2.title }}" href="{{ p2.url }}">{{ p2.title }}</a></li>
+          {% /for %}
+        </ul>
+      </details>
+      {% /for %}
+    </ul>
+  </nav>
+</div>
