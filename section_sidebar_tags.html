@@ -1,0 +1,17 @@
+<!-- 标签列表 -->
+<div class="card">
+    <header class="card-header">
+        <p class="card-header-title">
+            <span class="tran-site-tags">Tags</span>
+        </p>
+    </header>
+    <div class="card-content site-tags">
+        <div class="content">
+            <div class="tags">
+                {% for p in allTags %}
+                <a class="tag is-link is-light" href="{{ p.url }}">#{{ p.name }}</a>
+                {% /for %}
+            </div>
+        </div>
+    </div>
+</div>
